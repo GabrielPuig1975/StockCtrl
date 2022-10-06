@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/da35cd9b00.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gulzar&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Stock Control</title>
+  </head>
+  <boby>
+    <div class="title">
+      <i class="fa-solid fa-plus-minus"></i>
+      <h1>Sistema de gestión de Control</h1>
+      <p class="logo"><a href="/">GCoder ~$_</a></p>
+    </div>
+    <header class="addproduct-header">
+      <div>
+        <i class="fa-solid fa-clipboard-list"></i>
+        Carga y modificación de Productos
+      </div>
+      <div>
+        <button class="addproduct-openButton">
+          <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <button class="addproduct-closeButton">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </header>
+    <div class="addproduct-general">
+      <div class="addproduct-container">
+        <div class="addproduct-container-son">
+          <form class="addproduct-container-form">
+            <label for="dateMod">Fecha de ingreso</label>
+            <input
+              type="date"
+              name="dateMod"
+              class="dateMod"
+              id="dateMod"
+              required
+            />
+            <label for="cod">Código</label>
+            <input type="text" name="cod" class="addproduct-ims" id="cod" />
+            <label for="desc">Descripción</label>
+            <textarea
+              name="desc"
+              id="desc"
+              cols="30"
+              rows="5"
+              required
+            ></textarea>
+            <label for="listPrice">Precio Lista</label>
+            <input
+              type="number"
+              name="listPrice"
+              class="addproduct-prices"
+              id="listPrice"
+              required
+            />
+          </form>
+        </div>
+        <div class="addproduct-images">
+          <form method="POST" enctype="multipart/form-data">
+            <label for="file1" class="addproduct-file1"> Subir archivos </label>
+            <input
+              type="file"
+              name="file1"
+              id="file1"
+              multiple
+              accept="image/*"
+            />
+            <input
+              type="button"
+              name="inputSubmit"
+              class="addproduct-inputSubmit"
+            />
+            <span class="addproduct-foto1"></span>
+            <span class="addproduct-foto2"></span>
+            <span class="addproduct-foto3"></span>
+          </form>
+        </div>
+        <div class="addproduct-container-rigth">
+          <label for="iva">IVA</label>
+          <input
+            type="number"
+            name="iva"
+            class="addproduct-ims"
+            id="iva"
+            required
+          />
+          <label for="bonif">%Bonificación</label>
+          <input
+            type="number"
+            name="bonif"
+            class="addproduct-ims"
+            id="bonif"
+            required
+          />
+          <label for="soldPrice">Precio Venta</label>
+          <input
+            type="number"
+            name="soldPrice"
+            class="addproduct-prices"
+            id="soldPrice"
+            required
+          />
+          <label for="stock">Stock</label>
+          <input
+            type="number"
+            name="stock"
+            class="addproduct-ims"
+            id="stock"
+            required
+          />
+          <div class="addproduct-loadButton">
+            <button class="addproduct-submit">Cargar artículo</button>
+          </div>
+        </div>
+        <div class="addproduct-container-last">
+          <h4>Proveedores</h4>
+          <form action="../#" method="post">
+            <label for="provId">id</label>
+            <input type="text" name="provId" id="provId" />
+            <label for="nameProv">Nombre</label>
+            <input type="text" name="nameProv" id="nameProv" />
+            <label for="addProv">Dirección</label>
+            <input type="text" name="addProv" id="addProv" />
+            <label for="telProv">Teléfonos</label>
+            <input type="text" name="telProv" id="telProv" />
+            <label for="emailProv">Email</label>
+            <input
+              type="email"
+              name="emailProv"
+              id="emailProv"
+              placeholder="example@mail.com"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="addproduct-backnext">
+      <p>
+        <a href="./index.html"><i class="fa-solid fa-arrow-left"></i> Back</a>
+      </p>
+    </div>
+    <script src="./scripts/añadir.js"></script>
+  </boby>
+</html>

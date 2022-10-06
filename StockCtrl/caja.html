@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/da35cd9b00.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gulzar&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Stock Control</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: radial-gradient(#804588 0%, #00d4ff 100%);
+      }
+      :root {
+        --bd: 1px solid #000;
+        --ff: "Gulzar", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        --color: #6daaaa;
+        --color2: rgb(250, 56, 56);
+        --color3: rgb(100, 100, 250);
+        --color4: #00fff2;
+        --color5: rgb(69, 238, 69);
+        --color6: #ffa500;
+        --bs: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        --br: 10px 0px 0px 0px;
+      }
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 24px;
+        padding: 0px 0px 2px 2px;
+        font-family: var(--ff);
+        background-color: var(--color);
+      }
+      .logo a {
+        display: grid;
+        text-decoration: none;
+        font-weight: bold;
+        color: #000;
+      }
+      h2, h3 {
+        text-align: center;
+        width: 100%;
+        padding: 12px;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+        margin: auto;
+        max-width: 700px;
+        width: 700px;
+        padding: 12px;
+        margin-bottom: 24px;
+        text-align: center;
+        border: var(--bd);
+      }
+      .rent {
+        width: 150px;
+      }
+      .rentDate {
+        margin-bottom: 12px;
+      }
+      .totales>button, p,
+      .total {
+        margin-left: 12px;
+        border: var(--bd);
+        width: 150px;
+        text-align: center;
+      }
+     
+      .backnext {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+      }
+      .backnext a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.75);
+      }
+
+      @media (max-width: 540px) {
+        .title {
+          display: grid;
+          grid-template-columns: repeat(2, auto);
+          row-gap: 14px;
+          font-family: "Times New Roman", Times, serif;
+          font-size: 12px;
+        }
+        .logo a {
+          display: grid;
+          align-self: center;
+          font-style: 5px;
+        }
+      }
+      </style>
+  </head>
+  <body>
+    <div class="title">
+      <h1>Sistema de gestión de Control</h1>
+      <p class="logo"><a href="/">GCoder ~$_</a></p>
+    </div>
+    <div>
+      <script class="script">
+        document.write("La fecha actual es: ")
+        date = new Date().toLocaleDateString();
+        document.write(date);
+      </script>
+    </div>
+    <h2>Local</h2>
+    <h3>Movimiento Mensual de Gastos del Local</h3>
+    <div class="container">
+      <div>
+        <form id="form">
+          <label for="rental">Alquiler</label>
+          <input class="rent" type="number" name="rental" id="rental" required>
+          <label for="expir">Vencimiento</label>
+          <input class="rent rentDate" type="date" name="expir" id="expir" >
+        </div>
+        <div>
+          <label for="nrg">Luz</label>
+          <input class="rent" type="number" name="nrg" id="nrg" required>
+          <label for="nrgexpir">Vencimiento</label>
+          <input class="rent rentDate" type="date" name="nrgexpir" id="nrgexpir">
+        </div>
+        <div>
+          <label for="gas">Gas</label>
+          <input class="rent" type="number" name="gas" id="gas" required>
+          <label for="gasexpir">Vencimiento</label>
+          <input class="rent rentDate" type="date" name="gasexpir" id="gasexpir">
+      </div>
+      <div>
+        <label for="net">Internet</label>
+        <input class="rent renDate" type="number" name="net" id="net" required>
+        <label for="netxpir">Vencimiento</label>
+        <input class="rent rentDate" type="date" name="netxpir" id="netxpir" >
+      </div>
+    </div>
+    <div class="totales">
+      <button type="submit" class="calc">Calcular Gastos</button>
+      <p>Gastos del Mes</p>
+      <p class="total"></p>
+    </div>
+  </form>
+
+      <div class="backnext">
+        <p>
+          <a href="./index.html"><i class="fa-solid fa-arrow-left"></i> Back</a>
+        </p>
+      </div>
+    </div>
+    <script src="./scripts/caja.js"></script>
+  </body>
+</html>

@@ -23,6 +23,7 @@
       <h1>Sistema de gestión de Control</h1>
       <p class="logo"><a href="/">GCoder ~$_</a></p>
     </div>
+    <div class="addproduct-all-code">
     <header class="addproduct-header">
       <div>
         <i class="fa-solid fa-clipboard-list"></i>
@@ -45,16 +46,22 @@
             <input
               type="date"
               name="dateMod"
-              class="dateMod"
-              id="dateMod"
+              class="addproduct-dateMod"
+              id="addproduct-dateMod"
               required
             />
             <label for="cod">Código</label>
-            <input type="text" name="cod" class="addproduct-ims" id="cod" />
+            <input 
+              type="text" 
+              name="cod" 
+              class="addproduct-ims" 
+              id="addproduct-cod" 
+            />
             <label for="desc">Descripción</label>
             <textarea
               name="desc"
-              id="desc"
+              class="addProduct-descrip"
+              id="addProduct-descrip"
               cols="30"
               rows="5"
               required
@@ -64,20 +71,21 @@
               type="number"
               name="listPrice"
               class="addproduct-prices"
-              id="listPrice"
+              id="addproduct-Listprice"
               required
             />
           </form>
         </div>
         <div class="addproduct-images">
           <form method="POST" enctype="multipart/form-data">
-            <label for="file1" class="addproduct-file1"> Subir archivos </label>
+            <label for="addProduct-files" class="addproduct-Loadfiles"> Subir archivos </label>
             <input
-              type="file"
-              name="file1"
-              id="file1"
-              multiple
-              accept="image/*"
+            type="file"
+            name="file1"
+            class="addproduct-files"
+            id="addProduct-files"
+            multiple
+            accept="image/*"
             />
             <input
               type="button"
@@ -95,7 +103,7 @@
             type="number"
             name="iva"
             class="addproduct-ims"
-            id="iva"
+            id="addproduct-iva"
             required
           />
           <label for="bonif">%Bonificación</label>
@@ -103,51 +111,58 @@
             type="number"
             name="bonif"
             class="addproduct-ims"
-            id="bonif"
+            id="addproduct-bonif"
             required
           />
           <label for="soldPrice">Precio Venta</label>
-          <input
-            type="number"
-            name="soldPrice"
-            class="addproduct-prices"
-            id="soldPrice"
-            required
-          />
+          <span class="addproduct-prices-span" id="addproduct-soldPrice">Total </span>
           <label for="stock">Stock</label>
           <input
             type="number"
             name="stock"
             class="addproduct-ims"
-            id="stock"
+            id="addproduct-stock"
             required
           />
           <div class="addproduct-loadButton">
-            <button class="addproduct-submit">Cargar artículo</button>
+            <button type="button" class="addproduct-submitArt">Cargar artículo</button>
           </div>
         </div>
         <div class="addproduct-container-last">
           <h4>Proveedores</h4>
           <form action="../#" method="post">
             <label for="provId">id</label>
-            <input type="text" name="provId" id="provId" />
+            <input type="text" name="provId" id="addProduct-proveeId" />
             <label for="nameProv">Nombre</label>
-            <input type="text" name="nameProv" id="nameProv" />
+            <input type="text" name="nameProv" id="addProduct-nameProvee" />
             <label for="addProv">Dirección</label>
-            <input type="text" name="addProv" id="addProv" />
+            <input type="text" name="addProv" id="addProduct-addressProvee" />
             <label for="telProv">Teléfonos</label>
-            <input type="text" name="telProv" id="telProv" />
+            <input type="text" name="telProv" id="addProduct-telProvee" />
             <label for="emailProv">Email</label>
             <input
               type="email"
               name="emailProv"
-              id="emailProv"
+              id="addProduct-emailProvee"
               placeholder="example@mail.com"
             />
           </form>
         </div>
       </div>
     </div>
+    </div>
+    <button class="verCatalogo hide">Ver Catálogo</button>
+    <section>
+      <div class="catalogo-container">
+        
+
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+
+
     <div class="addproduct-backnext">
       <p>
         <a href="./index.html"><i class="fa-solid fa-arrow-left"></i> Back</a>

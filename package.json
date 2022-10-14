@@ -1,0 +1,26 @@
+{
+  "name": "stockctrl",
+  "version": "1.0.0",
+  "description": "COntrol de stock y mercaderías",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GabrielPuig1975/StockCtrl.git"
+  },
+  "keywords": [
+    "stock",
+    "mercaderías",
+    "control"
+  ],
+  "author": "Gabriel Puig",
+  "license": "MIT",
+  "type": "module", 
+  "src":"./añadir.js",
+  "bugs": {
+    "url": "https://github.com/GabrielPuig1975/StockCtrl/issues"
+  },
+  "homepage": "https://github.com/GabrielPuig1975/StockCtrl#readme"
+}

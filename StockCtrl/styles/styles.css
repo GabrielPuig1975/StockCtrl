@@ -28,6 +28,7 @@ body {
   justify-content: space-evenly;
   margin-bottom: 24px;
   padding: 0px 0px 2px 2px;
+  height: 55px;
   font-family: var(--ff);
   background-color: var(--color);
 }
@@ -199,10 +200,6 @@ body {
 .box2-list ul li,
 .box3-list ul li {
   margin-left: 8px;
-}
-
-i {
-  font-size: large;
 }
 
 .box-list ul li a:hover,
@@ -417,7 +414,7 @@ i {
   width: 80px;
 }
 
-.addproduct-prices {
+.addproduct-prices, .addproduct-prices-span {
   width: 120px;
   text-align: center;
   border: 2px solid rgb(100, 100, 250);
@@ -446,7 +443,7 @@ i {
   display: none;
 }
 
-.addproduct-img {
+.loadsImages, img {
   height: 100px;
   width: 100px;
   border-radius: 20px;

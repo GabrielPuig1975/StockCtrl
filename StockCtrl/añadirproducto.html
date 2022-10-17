@@ -71,7 +71,7 @@
               type="number"
               name="listPrice"
               class="addproduct-prices"
-              id="addproduct-Listprice"
+              id="addproduct-listPrice"
               required
             />
           </form>
@@ -87,14 +87,11 @@
             multiple
             accept="image/*"
             />
-            <input
-              type="button"
-              name="inputSubmit"
-              class="addproduct-inputSubmit"
-            />
-            <span class="addproduct-foto1"></span>
-            <span class="addproduct-foto2"></span>
-            <span class="addproduct-foto3"></span>
+            <div class="loadsImages">
+              <img src="./images/disponible.jpg" alt="imagen de disponible.jpg" id="addproduct-foto1">
+              <img src="./images/disponible.jpg" alt="imagen de disponible.jpg" id="addproduct-foto2">
+              <img src="./images/disponible.jpg" alt="imagen de disponible.jpg" id="addproduct-foto3">
+            </div>
           </form>
         </div>
         <div class="addproduct-container-rigth">
@@ -151,9 +148,9 @@
       </div>
     </div>
     </div>
-    <button class="verCatalogo hide">Ver Catálogo</button>
+    <button type="button" class="verCatalogo hide">Ver Catálogo</button>
     <section>
-      <div class="catalogo-container">
+      <div class="catalogo-container" id="catalogo-container">
         
 
           </div>
